@@ -1,0 +1,149 @@
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .header {
+            width: 90%;
+            height: 4.5rem;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            float: right;
+        }
+        
+        .sidebar {
+            width: 10%;
+            height: 100vh;
+            background-color: blueviolet;
+        }
+        
+        .sidebar li {
+            color: white;
+            padding: 10px;
+            border-bottom: 1px solid white;
+            text-align: left;
+        }
+        
+        .sidebar li a {
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .container {
+            width: 200px;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+        }
+        
+        .click {
+            background-color: red;
+            cursor: pointer;
+        }
+        
+        .click:hover {
+            background-color: green;
+        }
+        
+        .click,
+        .links {
+            padding: 12px;
+            font-size: 1.2rem;
+            font-family: sans-serif;
+            border: none;
+            outline: none;
+            width: 200px;
+            color: white;
+            cursor: pointer;
+        }
+        
+        .list {
+            position: absolute;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        a:visited {
+            color: white;
+        }
+        
+        .newlist {
+            transform: scaleY(1);
+        }
+        
+        .links {
+            background-color: blue;
+            ;
+        }
+        
+        .links:hover {
+            background-color: brown;
+            transform: scale(1.1);
+        }
+        
+        table {
+            width: 600px;
+            box-shadow: -1px 12px 12px -6px;
+            background-color: rgba(red, green, blue, alpha);
+        }
+        
+        table,
+        td,
+        th {
+            padding: 20px;
+            border: 1px solid lightgray;
+            border-collapse: collapse;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        td {
+            font-size: 18px;
+        }
+        
+        th {
+            background-color: blue;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: lightblue;
+        }
+        
+        tr:nth-child(even):hover {
+            background-color: dodgerblue;
+            color: white;
+        }
+        
+        #btn-overview,
+        #btn-post {
+            width: 150px;
+            height: 50px;
+            border: none;
+            color: white;
+            background-color: rgb(255, 0, 68);
+            border-radius: 4px;
+            box-shadow: inset 0 0 0 0 #f9e506;
+            transition: ease-out 0.3s;
+            font-size: 15px;
+            outline: none;
+        }
+        
+        #btn-overview:hover,
+        #btn-post:hover {
+            box-shadow: inset 300px 0 0 0 #f93506;
+            cursor: pointer;
+            color: #000
+        }
