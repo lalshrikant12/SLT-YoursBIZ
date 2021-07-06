@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>MD</title>
+</head>
+
+
+<body>
+    <div class="header ">
+    </div>
+    <div class="sidebar ">
+        <ul>
+            <br><br><br><br>
+            <hr>
+            <li><a href="# ">Dashboard</a></li>
+            <li><a href="# ">Publish</a></li>
+            <li><a href="# ">Activity</a></li>
+            <li><a href="# ">Analytics</a></li>
+            <li><a href="# ">Interactions</a></li>
+            <li><a href="# ">Influencers</a></li>
+            <li><a href="# ">Performance</a></li>
+            <li><a href="# ">Widgets</a></li>
+            <li><a href="# ">Help</a></li>
+        </ul>
+    </div>
+
+    <div class="container ">
+
+        <div style="width:30%">
+            <canvas id="myChart" width="100" height="100"></canvas>
+        </div>
+        <h1 style="color: #00008B">facebook</h1>
+        <div style="display: inline ; ">
+            <button id="btn-overview">Account Overview</button>
+        </div>
+        <div style="display: inline ; ">
+            <button id="btn-post">Posts</button>
+
+
+        </div>
+        <table>
+            <tr>
+                <td>Date Time</td>
+
+                <td>Reach</td>
+                <td>Likes</td>
+                <td>Dislikes</td>
+            </tr>
+            <tr>
+
+                <td>Comment</td>
+                <td>Engaged users</td>
+                <td>Impressions</td>
+                <td>Effect on followers</td>
+
+
+
+            </tr>
+            <tr>
+                <td>Effect on channel reach</td>
+                <td>organic Reach</td>
+                <td>Paid reach of post</td>
+                <td>Reply Rate</td>
+            </tr>
+
+        </table>
+
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        let click = document.querySelector('.click');
+        let list = document.querySelector('.list');
+        click.addEventListener("click ", () => {
+            list.classList.toggle('newlist');
+        });
+    </script>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['6 hrs', '12 hrs', '1 day', '2 day'],
+                datasets: [{
+                    label: 'Reach',
+                    data: [0, 19, 3, 5, 2, 3],
+
+
+
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+
+
+            },
+
+
+
+
+
+
+            options: {
+
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+
+                }
+            }
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
