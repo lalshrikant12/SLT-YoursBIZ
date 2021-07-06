@@ -8,6 +8,36 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Reach', 'Time and date', 'Expenses', 'xyz'],
+                ['6 hrs', 0, 0, 0],
+                ['12 hrs', 1170, 460, 200],
+                ['1 day', 660, 1120, 300],
+                ['2 day', 1030, 540, 400],
+                ['3 day', 1030, 540, 500]
+            ]);
+
+            var options = {
+                title: 'Compare Performance',
+                curveType: 'function',
+                legend: {
+                    position: 'bottom'
+                }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
     <title>MD</title>
 </head>
 
@@ -32,10 +62,8 @@
     </div>
 
     <div class="container ">
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
-        <div style="width:30%">
-            <canvas id="myChart" width="100" height="100"></canvas>
-        </div>
         <h1 style="color: #00008B">facebook</h1>
         <div style="display: inline ; ">
             <button id="btn-overview">Account Overview</button>
@@ -88,56 +116,7 @@
             list.classList.toggle('newlist');
         });
     </script>
-    <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['6 hrs', '12 hrs', '1 day', '2 day'],
-                datasets: [{
-                    label: 'Reach',
-                    data: [0, 19, 3, 5, 2, 3],
 
-
-
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
-                        'rgba(255, 159, 64, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-
-
-            },
-
-
-
-
-
-
-            options: {
-
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-
-                }
-            }
-        });
-    </script>
 
 
 
