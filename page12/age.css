@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    width: 85%;
+    height: 4.35rem;
+    background-color: blueviolet;
+    display: flex;
+    float: right;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sidebar {
+    width: 15%;
+    height: 100vh;
+    background-color: blueviolet;
+}
+
+#sidebar li {
+    color: white;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    text-align: left;
+}
+
+#sidebar li a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.container1 {
+    width: 300px;
+    height: 650px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 70px;
+    left: 960px;
+}
+
+.recentfeeds {
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.viewalltopics {
+    color: white;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.viewalltopics ul li {
+    padding-top: 85px;
+    padding-left: 10px;
+}
+
+.container2 {
+    width: 330px;
+    height: 250px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 70px;
+    left: 520px;
+}
+
+.discovernewideas {
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid grey;
+}
+
+.discovernewideas h3 {
+    color: white;
+    text-decoration: none;
+}
+
+.browse {
+    color: white;
+    padding-left: 20px;
+}
+
+.categories {
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.container3 {
+    width: 330px;
+    height: 250px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 400px;
+    left: 520px;
+}
+
+.radar {
+    text-align: center;
+}
+
+.radar h3 {
+    color: white;
+    padding-top: 5px;
+}
+
+.date h4 {
+    padding-left: 15px;
+    color: white;
+}
+
+.vertical {
+    border-left: 2px solid white;
+    height: 220px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+}
+
+.task h4 {
+    margin-top: 5px;
+}
+
+label[for="totalpeople"],
+label[for="visited"],
+label[for="perday"],
+label[for="perhr"] {
+    display: inline-block;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center a {
+    margin: 0 20px;
+}
