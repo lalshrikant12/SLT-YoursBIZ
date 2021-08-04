@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+:root {
+  --bgcolor: #111a30;
+  --text: #fff;
+  --size: 1.3em;
+}
+
+<style>
+* {box-sizing: border-box;}
+
+body {
+   background: var(--bgcolor);
+  color: var(--text);
+  font-family: "Roboto Mono", monospace;
+
+  
+}
+
+.header {
+  color: rgba(255, 255, 255, 0.911);
+  overflow: hidden;
+  background-color:    #4682B4;
+  padding: 20px 10px;
+}
+
+.header a {
+  color: rgba(255, 255, 255, 0.911);
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+img#header-logo {
+  height: 45px;  
+ width: 70px;  
+ 
+ float: left;
+
+
+}
+
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+label[for="Amount"],
+label[for="method"],
+label[for="company-name"],
+label[for="transfer"],
+label[for="bank-country"],
+label[for="currency"],
+label[for="agree"],
+label[for="transaction-history"],
+label[for="balance"]
+{
+  display: inline-block;
+  margin: 20px;
+
+   font-size: 1.5em;
+
+}
+
+.card{
+  display:  inline-block;
+  font-size: 1.5em;
+  margin: 20px;
+
+}
+.container{
+    font-size: 1.5em;
+  margin: 20px;
+  background-color: black;
+}
+
+#amount,
+#company-name
+{
+  margin: 5px 9px;
+  padding: 5px;
+  color: #111a30;
+  background-color: #bdc6db;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.3em;
+
+
+}
+
+#method,
+#country,
+#currency
+{
+  margin: 5px 9px;
+  padding: 5px;
+  color: #111a30;
+  background-color: #bdc6db;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.3emethod
+}
+
+
+
+#btnManage,
+#btnWithdraw{
+  width: 14%;
+  
+
+  right: 25%;
+  position: relative;
+  display: inline-flex;
+  
+  margin: 7px auto;
+  /* margin-left: 29.6px; */
+  padding: 5px;
+  color: #111a30;
+  background-color: #bdc6db;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  
+}
+#btnAutoWithdraw,
+#btnDeposit{
+  width: 14%;
+  
+
+  left: 25%;
+  position: relative;
+  display: inline-flex ;
+  
+  margin: 7px auto;
+  /* margin-left: 29.6px; */
+  padding: 5px;
+  color: #111a30;
+  background-color: #bdc6db;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+
+}
+
+
+
+.drop-sections > div {
+  border-radius: 13px;
+  width: 100%;
+  height: inherit;
+  padding: 15px;
+  padding-left: 40px;
+  background-color: rgba(0, 0, 0, 0.616);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.377);
+}
+
+.drop-sections > div > h2 {
+  padding: 0.5em;
+  font-size: 1.9em;
+}
+
+@media (min-width: 1025px) {
+  .drop-sections {
+    position: relative;
+    display: inline-block;
+    width: 94.6%;
+    margin: 3%;
+    height: auto;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .drop-sections {
+    position: relative;
+    display: inline-block;
+    width: 94%;
+    margin: 3%;
+    height: auto;
+  }
+}
+
+
+.flex-column {
+    color: #adb5bd;
+    font-size: 13px
+}
+
+.flex-column p {
+    letter-spacing: 1px;
+    font-size: 18px
+}
+
+
+#ts{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 12px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+#btn-overview,
+#btn-post{
+  width: 14%;
+  
+
+  left: 25%;
+  position: relative;
+  display: inline-flex ;
+  
+  margin: 7px auto;
+  /* margin-left: 29.6px; */
+  padding: 5px;
+  color: #111a30;
+  background-color: #bdc6db;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+
+}
